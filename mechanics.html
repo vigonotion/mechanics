@@ -1,0 +1,1860 @@
+<!DOCTYPE html>
+<html ng-app="GeekApp" lang="en-US" ng-cloak>
+<head>
+	<meta charset='utf-8'>
+	<meta id="vp" name="viewport" content="width=device-width, initial-scale=1.0">
+			<script>
+			window.addEventListener( 'DOMContentLoaded',  function() {
+				var width = document.documentElement.clientWidth || window.innerWidth;
+				if (width < 960) {
+					var mvp = document.getElementById('vp');
+					// android debugging
+					mvp.setAttribute('content','width=960');
+				}
+			});
+		</script>
+		<meta content='yes' name='apple-mobile-web-app-capable'>
+	<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+
+			<title>Browse Board Game Mechanics | BoardGameGeek</title>
+	
+	
+<link rel="apple-touch-icon" 	href="https://cf.geekdo-static.com/icons/touch-icon180.png" />
+<link rel="shortcut icon" 		href="https://cf.geekdo-static.com/icons/favicon2.ico" type="image/ico" />
+<link rel="icon" 					href="https://cf.geekdo-static.com/icons/favicon2.ico" type="image/ico" />
+<link rel="search" 				href="/game-opensearch.xml" type="application/opensearchdescription+xml" title="BGG Game Search" />
+<meta name="apple-mobile-web-app-title" content="BGG">
+
+<meta name="theme-color" content="#2e2b47">
+<link rel="preconnect" href="https://api.geekdo.com" />
+
+
+
+
+	<meta property="og:image" content="https://cf.geekdo-static.com/images/opengraph/bgg_opengraph.png" />
+
+
+
+	<meta name="keywords" content="board game, boardgames, boardgame, board, games, game, hobby, boardgamegeek, geek, geekdo">
+
+<script>window.AdSlots = window.AdSlots || {
+	cmd: [],
+	disableScripts: ['gpt'],
+	renderOnFirstLoad: false,
+	divCheck: false
+};</script>
+
+
+						<link rel='stylesheet' type='text/css' href='https://cf.geekdo-static.com/static/geekui_master2_69a06428743cb.css'>
+					<link rel='stylesheet' type='text/css' href='https://cf.geekdo-static.com/static/css_master2_69a0640e9a275.css'>
+			
+	<base href="/">
+
+<script>
+	var GEEK = GEEK || {};
+	GEEK.adBlock = {"blockleaderboard":0,"blocklargeleaderboard":0,"blockskyscraper":0,"blockrectangle":0,"blockitembanner":0,"blocktextad":0,"blockebay":0,"blocksupportdrive":0,"blockamazon":0,"blockamazonsearch":0,"blockcontestsmodule":0,"blockbggstore":0,"blockbuyacopy":0,"blockpreview":0,"blockbetweenposts":0,"blocksleevesad":0};
+	GEEK.adConfig = {"blockleaderboard":null,"noadsense":false,"blocksupportdrive":null};
+	GEEK.adSlots = {"dfp-leaderboard":{"name":"boardgame_leaderboard_728x90"},"dfp-skyscraper":{"name":"boardgame_skyscraper_160x600"},"dfp-medrect":{"name":"boardgame_rectangle_300x250"},"dfp-repeater":{"name":"boardgame_home_repeater"},"dfp-medrect-reserved-home":{"name":"boardgame_reserved_home_300x250"},"dfp-leaderboard-lg":{"name":"boardgame_home_hero"},"dfp-home-sidekick":{"name":"boardgame_home_repeater"},"dfp-inline-post":{"name":"boardgame_inline_post"},"dfp-gamepage-marketplace":{"name":"boardgame_inline_post"}};
+	GEEK.legacyAds = [];
+	GEEK.bggStoreAds = [];
+	GEEK.googleTargets = [];
+	GEEK.userid = 0;
+	GEEK.domainname = 'boardgamegeek.com';
+	GEEK.domain = 'boardgame';
+	GEEK.geekitemPreload = {};
+	GEEK.geekitemSettings = null;
+	GEEK.geekitemModules = null;
+	GEEK.geekGlobalSettings = {"shutdown_file_ops":"1","shutdown_storeimage_ops":"0","shutdown_edit_avatar":"0","shutdown_file_upload":"0","shutdown_file_download":"0","shutdown_image_upload":"0"};
+	GEEK.geekimageSettings = null;
+	GEEK.legacy = 1;
+	GEEK.apiurlsPrefix = 'https://api.geekdo.com';
+	
+	
+	
+		
+		GEEK.apiurls = {
+		'root': '/api',
+		'amazon': '/api/amazon',
+		'files': '/api/files',
+		'geekitems': '/api/geekitems',
+		'collectionstatsgraph': '/api/collectionstatsgraph',
+		'images': '/api/images',
+		'threads': '/api/forums/threads',
+	 	'forums': '/api/forums',
+		'videos': '/api/videos',
+		'hotness': '/api/hotness',
+		'dynamicinfo': '/api/dynamicinfo',
+		'subtypeinfo': '/api/subtypeinfo',
+		'geekbay': '/api/geekbay',
+		'geekmarket': '/market/api/v1',
+	    'geekmarketapi': '/api/market',
+		'geeklists': '/api/geeklists',
+		'reviews': '/api/forumreviews',
+		'collections': '/api/collections',
+		'linkeditems': '/api/geekitem/linkeditems',
+		'subscriptions': '/api/subscriptions',
+	    'fans': '/api/fans',
+	    'geekpreviews': '/api/geekpreviews',
+	    'geekpreviewitems': '/api/geekpreviewitems',
+	   	'geekpreviewparentitems': '/api/geekpreviewparentitems',
+		'recs': '/api/geekitem/recs',
+	    'awards': '/api/geekawards',
+		'historicalrankgraph':  '/api/historicalrankgraph',
+		'blueprint_recipes': '/api/blueprints/recipes',
+		'affiliateads' : '/api/affiliateads',
+		'sleevesbycard': '/api/sleevesbycard',
+		'cardsetsbygame': '/api/cardsetsbygame',
+	};
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-104725-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('consent', 'default', {
+		'ad_storage': 'denied',
+		'analytics_storage': 'denied',
+		'personalization_storage': 'denied',
+		'wait_for_update': 3000
+		 });
+	gtag('config', 'UA-104725-1', {
+		'cookie_domain': 'boardgamegeek.com',
+		'send_page_view': false
+	});
+</script>
+
+        						<script type='text/javascript' src='https://cf.geekdo-static.com/static/geekangular17_master2_69a064435b8fe.js'></script>
+					<script type='text/javascript' src='https://cf.geekdo-static.com/static/geekui_master2_69a06428743cb.js'></script>
+					<script type='text/javascript' src='https://cf.geekdo-static.com/static/js_master2_69a0640dd014c.js'></script>
+					<script type='text/javascript' src='https://cf.geekdo-static.com/static/geekoutputtemplates_master2_69a06445094e6.js'></script>
+					<script type='text/javascript' src='https://cf.geekdo-static.com/static/geekuicommontemplates_master2_69a06445144d9.js'></script>
+			<script>
+	window.geekCookieConsent.gtagReady.then(function() {
+		gtag('event', 'page_view');
+	});
+</script>
+	<!-- why this? -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+<!-- Add to main?
+<link rel="apple-touch-icon" 	href="https://cf.geekdo-static.com/icons/appleicon.png" />
+<link rel="shortcut icon" 		href="https://cf.geekdo-static.com/icons/favicon.ico" type="image/ico" />
+<link rel="icon" 					href="https://cf.geekdo-static.com/icons/favicon.ico" type="image/ico" />
+<link rel="search" 				href="/game-opensearch.xml" type="application/opensearchdescription+xml" title="BGG Game Search" />
+-->
+
+
+
+
+
+<!--this is used only for GeekMap -->
+
+
+<!-- deal with adsense
+	<script type="text/javascript">
+		window.google_analytics_uacct = "UA-104725-1";
+		var googletag = googletag || { };
+		googletag.cmd = googletag.cmd || [];
+		( function() {
+			var gads = document.createElement('script');
+			gads.async = true;
+			gads.type  = 'text/javascript';
+			gads.src   = "//www.googletagservices.com/tag/js/gpt.js";
+			var node = document.getElementsByTagName('script')[0];
+			node.parentNode.insertBefore(gads, node);
+		} )();
+
+		adunits = [
+			{
+				name:    'boardgame_button_120x45',
+				size:    [ 120, 45 ],
+				target:  'dfp-button'
+			},
+			{
+				name:    'boardgame_leaderboard_728x90',
+				size:    [ 728, 90 ],
+				target:  'dfp-leaderboard'
+			},
+			{
+				name:    'boardgame_skyscraper_160x600',
+				size:    [ 160, 600 ],
+				target:  'dfp-skyscraper'
+			},
+			{
+				name:    'boardgame_rectangle_300x250',
+				size:    [ 300, 250 ],
+				target:  'dfp-medrect'
+			},
+			{
+				name:    'boardgame_rectangle_300x250',
+				size:    [ 300, 250 ],
+				target:  'dfp-medrect-reserved-home'
+			},
+			{
+				name:    'boardgame_button_120x90',
+				size:    [ 120, 90 ],
+				target:  'dfp-giftguide'
+			}
+		];
+
+		googletag.cmd.push(function() {
+			for( var i=0; i< adunits.length; i++ )
+			{
+				unit = adunits[i];
+				googletag.defineUnit('/1005854/ca-pub-7206761047394129/'+unit.name, unit.size, unit.target).
+				addService(googletag.pubads());
+			}
+
+			
+			googletag.pubads().setTargeting( "subdomain", "all" );
+			googletag.enableServices();
+		} );
+
+	</script>
+-->
+
+<script>
+	function start() {
+		
+	}
+
+	function ondomready() {
+				Amazon_LoadAds();
+				
+		GEEK.addHandlers();
+		GEEK.recaptchaKey = '6Ldyr6EaAAAAAE0F2hYgtHHqbF6nKPTENAwo6SyU';
+	}
+
+	if( typeof window.addEvent === "function" ) {
+		window.addEvent('domready', function() {
+			ondomready();
+		} );
+	} else {
+		window.addEventListener( "DOMContentLoaded", function() {
+			ondomready();
+	} );
+	}
+	window.onload = start;
+</script>
+
+
+</head>
+
+<body ng-controller="GeekOutput_LayoutCtrl as layoutctrl"
+		class="domain-boardgame"
+
+		ng-class="{ 'has-no-max-width' : layoutctrl.geekitemSettings.fluidlayout }">
+
+
+<div class='d-flex flex-column min-vh-100'>
+        	<div id="global-header-outer" class='global-header-outer'
+	  ng-controller="NavCtrl as navctrl"
+	  click-out="navctrl.closeMobileMenu()">
+
+	<geeknav-menu></geeknav-menu>
+</div>
+
+	 
+	
+	<main class='global-body flex-grow-1'
+		  id="mainbody"
+		  ng-class="{ 'has-overlay-sidebar': layoutctrl.showOverlaySidebar, 'has-hidden-fixed-sidebar': layoutctrl.localStorage.hideFixedSidebar }">
+		
+		<a id='mainbodytarget' tabindex="-1"></a>
+
+		<!-- Home King Ad -->
+		
+		<div hide-ad-block="blockleaderboard" >
+			<div class="advertisement-leaderboard">
+				<div class='center-block' ng-dfp-ad="dfp-leaderboard"></div>
+			</div>
+		</div>
+
+		<div class='global-body-content-container container-fluid'>
+							<geekoutput-sidebar deactivate-overlay-sidebar='layoutctrl.deactivateOverlaySidebar' show-overlay-sidebar='layoutctrl.showOverlaySidebar'></geekoutput-sidebar>
+         
+			
+			<div class='global-body-content pending'  ng-class="{'ready': layoutctrl.ready}">
+		
+				<a id='maincontenttarget' tabindex="-1"></a>
+			
+				<div class="support-plea-container" hide-ad-block="blocksupportdrive">
+					<geekoutput-plea></geekoutput-plea>
+				</div>
+				<div class="legacy">
+	<div id="container" class="yui-skin-sam">
+		<div id="maincontent" ng-non-bindable>
+			<div class='infobox'>
+	<form method='GET' action="">
+	
+	<h3 class='fl' style='margin-right: 1em; display:inline;'>Board Game Mechanics</h3>
+
+	
+	
+	<div class='fr'></div>
+	
+	<div class='clear'></div>
+	</form>
+</div>
+
+<table width='100%' class='forum_table'>
+						<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2073/acting"   >Acting</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2840/action-event"   >Action / Event</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2838/action-drafting"   >Action Drafting</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2001/action-points"   >Action Points</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2689/action-queue"   >Action Queue</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2839/action-retrieval"   >Action Retrieval</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2834/action-timer"   >Action Timer</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2847/advantage-token"   >Advantage Token</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2916/alliances"   >Alliances</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2080/area-majority-influence"   >Area Majority / Influence</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2046/area-movement"   >Area Movement</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2021/area-impulse"   >Area-Impulse</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2012/auction-bidding"   >Auction / Bidding</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/3098/auction-compensation"   >Auction Compensation</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2930/auction-dexterity"   >Auction: Dexterity</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2924/auction-dutch"   >Auction: Dutch</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2932/auction-dutch-priority"   >Auction: Dutch Priority</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2918/auction-english"   >Auction: English</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2931/auction-fixed-placement"   >Auction: Fixed Placement</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2927/auction-multiple-lot"   >Auction: Multiple Lot</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2923/auction-once-around"   >Auction: Once Around</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2920/auction-sealed-bid"   >Auction: Sealed Bid</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2919/auction-turn-order-until-pass"   >Auction: Turn Order Until Pass</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2903/automatic-resource-growth"   >Automatic Resource Growth</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2014/betting-and-bluffing"   >Betting and Bluffing</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2957/bias"   >Bias</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/3097/bids-as-wagers"   >Bids As Wagers</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2999/bingo"   >Bingo</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2913/bribery"   >Bribery</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2018/campaign-battle-card-driven"   >Campaign / Battle Card Driven</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2857/card-play-conflict-resolution"   >Card Play Conflict Resolution</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2887/catch-the-leader"   >Catch the Leader</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2956/chaining"   >Chaining</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2057/chit-pull-system"   >Chit-Pull System</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2984/closed-drafting"   >Closed Drafting</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2928/closed-economy-auction"   >Closed Economy Auction</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2841/command-cards"   >Command Cards</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2013/commodity-speculation"   >Commodity Speculation</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2893/communication-limits"   >Communication Limits</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2883/connections"   >Connections</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2922/constrained-bidding"   >Constrained Bidding</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2912/contracts"   >Contracts</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2023/cooperative-game"   >Cooperative Game</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2010/crayon-rail-system"   >Crayon Rail System</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2854/critical-hits-and-failures"   >Critical Hits and Failures</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2990/cube-tower"   >Cube Tower</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/3004/deck-construction"   >Deck Construction</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2664/deck-bag-and-pool-building"   >Deck, Bag, and Pool Building</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/3002/deduction"   >Deduction</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2901/delayed-purchase"   >Delayed Purchase</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2072/dice-rolling"   >Dice Rolling</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2856/die-icon-resolution"   >Die Icon Resolution</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2950/different-dice-movement"   >Different Dice Movement</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/3096/drawing"   >Drawing</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2882/elapsed-real-time-ending"   >Elapsed Real Time Ending</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2043/enclosure"   >Enclosure</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2875/end-game-bonuses"   >End Game Bonuses</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2850/events"   >Events</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2885/finale-ending"   >Finale Ending</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2860/flicking"   >Flicking</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2843/follow"   >Follow</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2864/force-commitment"   >Force Commitment</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2978/grid-coverage"   >Grid Coverage</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2676/grid-movement"   >Grid Movement</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2040/hand-management"   >Hand Management</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2026/hexagon-grid"   >Hexagon Grid</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2967/hidden-movement"   >Hidden Movement</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2891/hidden-roles"   >Hidden Roles</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2987/hidden-victory-points"   >Hidden Victory Points</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2889/highest-lowest-scoring"   >Highest-Lowest Scoring</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/3000/hot-potato"   >Hot Potato</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2906/i-cut-you-choose"   >I Cut, You Choose</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2952/impulse-movement"   >Impulse Movement</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2902/income"   >Income</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2914/increase-value-of-unchosen-resources"   >Increase Value of Unchosen Resources</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/3003/induction"   >Induction</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2837/interrupts"   >Interrupts</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2910/investment"   >Investment</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2871/kill-steal"   >Kill Steal</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2886/king-of-the-hill"   >King of the Hill</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2980/ladder-climbing"   >Ladder Climbing</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/3001/layering"   >Layering</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2824/legacy-game"   >Legacy Game</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2039/line-drawing"   >Line Drawing</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2975/line-of-sight"   >Line of Sight</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2904/loans"   >Loans</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2836/lose-a-turn"   >Lose a Turn</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2955/mancala"   >Mancala</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2959/map-addition"   >Map Addition</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2961/map-deformation"   >Map Deformation</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2960/map-reduction"   >Map Reduction</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2900/market"   >Market</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/3007/matching"   >Matching</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2949/measurement-movement"   >Measurement Movement</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2981/melding-and-splaying"   >Melding and Splaying</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2047/memory"   >Memory</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2863/minimap-resolution"   >Minimap Resolution</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2011/modular-board"   >Modular Board</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2962/move-through-deck"   >Move Through Deck</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2947/movement-points"   >Movement Points</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2963/movement-template"   >Movement Template</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2958/moving-multiple-units"   >Moving Multiple Units</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/3099/multi-use-cards"   >Multi-Use Cards</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2965/multiple-maps"   >Multiple Maps</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2851/narrative-choice-paragraph"   >Narrative Choice / Paragraph</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2915/negotiation"   >Negotiation</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/3104/neighbor-scope"   >Neighbor Scope</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2081/network-and-route-building"   >Network and Route Building</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2846/once-per-game-abilities"   >Once-Per-Game Abilities</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2041/open-drafting"   >Open Drafting</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2844/order-counters"   >Order Counters</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/3101/ordering"   >Ordering</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2911/ownership"   >Ownership</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2055/paper-and-pencil"   >Paper-and-Pencil</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2835/passed-action-token"   >Passed Action Token</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2048/pattern-building"   >Pattern Building</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2946/pattern-movement"   >Pattern Movement</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2060/pattern-recognition"   >Pattern Recognition</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2989/physical-removal"   >Physical Removal</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2007/pick-up-and-deliver"   >Pick-up and Deliver</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2964/pieces-as-map"   >Pieces as Map</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2685/player-elimination"   >Player Elimination</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2865/player-judge"   >Player Judge</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2078/point-to-point-movement"   >Point to Point Movement</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/3006/predictive-bid"   >Predictive Bid</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2858/prisoners-dilemma"   >Prisoner's Dilemma</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2953/programmed-movement"   >Programmed Movement</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2661/push-your-luck"   >Push Your Luck</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/3102/questions-and-answers"   >Questions and Answers</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2876/race"   >Race</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2909/random-production"   >Random Production</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2855/ratio-combat-results-table"   >Ratio / Combat Results Table</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2870/re-rolling-and-locking"   >Re-rolling and Locking</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2831/real-time"   >Real-Time</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2954/relative-movement"   >Relative Movement</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/3103/resource-queue"   >Resource Queue</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2948/resource-to-move"   >Resource to Move</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2003/rock-paper-scissors"   >Rock-Paper-Scissors</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2028/role-playing"   >Role Playing</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2892/roles-with-asymmetric-information"   >Roles with Asymmetric Information</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2035/roll-spin-and-move"   >Roll / Spin and Move</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2813/rondel"   >Rondel</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2822/scenario-mission-campaign-game"   >Scenario / Mission / Campaign Game</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2823/score-and-reset-game"   >Score-and-Reset Game</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2016/secret-unit-deployment"   >Secret Unit Deployment</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2926/selection-order-bid"   >Selection Order Bid</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2820/semi-cooperative-game"   >Semi-Cooperative Game</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2004/set-collection"   >Set Collection</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2070/simulation"   >Simulation</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2020/simultaneous-action-selection"   >Simultaneous Action Selection</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2038/singing"   >Singing</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2821/single-loser-game"   >Single Loser Game</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/3005/slide-push"   >Slide / Push</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2819/solo-solitaire-game"   >Solo / Solitaire Game</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2991/speed-matching"   >Speed Matching</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/3113/spelling"   >Spelling</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2940/square-grid"   >Square Grid</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2988/stacking-and-balancing"   >Stacking and Balancing</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2853/stat-check-resolution"   >Stat Check Resolution</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2861/static-capture"   >Static Capture</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2005/stock-holding"   >Stock Holding</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2027/storytelling"   >Storytelling</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2884/sudden-death-ending"   >Sudden Death Ending</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/3100/tags"   >Tags</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2686/take-that"   >Take That</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2866/targeted-clues"   >Targeted Clues</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2019/team-based-game"   >Team-Based Game</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2849/tech-trees-tech-tracks"   >Tech Trees / Tech Tracks</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2944/three-dimensional-movement"   >Three Dimensional Movement</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2002/tile-placement"   >Tile Placement</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2939/track-movement"   >Track Movement</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2008/trading"   >Trading</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2814/traitor-game"   >Traitor Game</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2009/trick-taking"   >Trick-taking</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2888/tug-of-war"   >Tug of War</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2827/turn-order-auction"   >Turn Order: Auction</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2829/turn-order-claim-action"   >Turn Order: Claim Action</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2830/turn-order-pass-order"   >Turn Order: Pass Order</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2828/turn-order-progressive"   >Turn Order: Progressive</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2985/turn-order-random"   >Turn Order: Random</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2833/turn-order-role-order"   >Turn Order: Role Order</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2826/turn-order-stat-based"   >Turn Order: Stat-Based</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2663/turn-order-time-track"   >Turn Order: Time Track</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2079/variable-phase-order"   >Variable Phase Order</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2015/variable-player-powers"   >Variable Player Powers</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2897/variable-set-up"   >Variable Set-up</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2874/victory-points-as-a-resource"   >Victory Points as a Resource</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2017/voting"   >Voting</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2082/worker-placement"   >Worker Placement</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2935/worker-placement-with-dice-workers"   >Worker Placement with Dice Workers</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   					<tr>
+						<td width='50%'>
+					<a  href="/boardgamemechanic/2933/worker-placement-different-worker-types"   >Worker Placement, Different Worker Types</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+		         
+   						<td width='50%'>
+					<a  href="/boardgamemechanic/2974/zone-of-control"   >Zone of Control</a>
+					<div class='smallerfont dull ml10' >
+						<div class='ml10'></div>
+					</div>
+				</td>
+					</tr>
+		         
+   </table>
+
+<p align='right'></p>
+
+			<div id="legacy_modal"></div>
+		</div>
+	</div>
+</div>
+
+				<div class='global-body-content-secondary'>
+									</div>
+			</div>
+		</div>
+
+	</main>
+			<geekoutput-footer></geekoutput-footer>
+	</div>
+
+
+
+
+</body>
+</html>

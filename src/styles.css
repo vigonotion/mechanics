@@ -1,0 +1,357 @@
+/* ═══════════════════════════════════════════════════
+   Board Game Mechanic Generator – Stylesheet
+   ═══════════════════════════════════════════════════ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Fonts ─────────────────────────────────────────── */
+/* Cinzel: headings, Crimson Text: body */
+
+/* ── Color Tokens ──────────────────────────────────── */
+:root {
+  --wood-dark:   #1a0e05;
+  --wood-mid:    #3a1c0a;
+  --parchment:   #f4e8c1;
+  --parchment-dark: #e8d49a;
+  --gold:        #c8a84b;
+  --gold-light:  #e8c86a;
+  --gold-dark:   #9a7830;
+  --mahogany:    #5c3317;
+  --mahogany-dark: #3a1f0a;
+  --ink:         #2c1a0e;
+  --ink-faded:   #5a3a24;
+  --shadow:      rgba(0, 0, 0, 0.6);
+  --glow-gold:   rgba(200, 168, 75, 0.25);
+}
+
+/* ── Body / Background ─────────────────────────────── */
+body {
+  font-family: 'Crimson Text', Georgia, serif;
+  color: var(--ink);
+  min-height: 100vh;
+  background-color: var(--wood-dark);
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.012) 2px,
+      rgba(255, 255, 255, 0.012) 4px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      transparent,
+      transparent 8px,
+      rgba(0, 0, 0, 0.08) 8px,
+      rgba(0, 0, 0, 0.08) 9px
+    );
+  overflow-x: hidden;
+}
+
+/* ── App Shell ─────────────────────────────────────── */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 4rem;
+  gap: 3rem;
+}
+
+/* ── Header ────────────────────────────────────────── */
+.app-header {
+  text-align: center;
+  padding: 1.5rem 2rem 1rem;
+  position: relative;
+}
+
+.app-header::after {
+  content: '';
+  display: block;
+  width: 240px;
+  height: 2px;
+  margin: 1rem auto 0;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.app-title {
+  font-family: 'Cinzel', 'Times New Roman', serif;
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  font-weight: 900;
+  color: var(--gold);
+  text-shadow:
+    0 0 30px rgba(200, 168, 75, 0.4),
+    0 2px 4px rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+.app-subtitle {
+  margin-top: 0.6rem;
+  font-family: 'Crimson Text', Georgia, serif;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-style: italic;
+  color: var(--parchment-dark);
+  opacity: 0.85;
+  letter-spacing: 0.02em;
+}
+
+/* ── Cards Grid ────────────────────────────────────── */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  width: 100%;
+  max-width: 1100px;
+  perspective: 1200px;
+}
+
+@media (max-width: 900px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Mechanic Card ─────────────────────────────────── */
+.mechanic-card {
+  position: relative;
+  background: var(--parchment);
+  border: 3px solid var(--mahogany);
+  border-radius: 6px;
+  padding: 1.75rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: default;
+  will-change: transform;
+  transform-style: preserve-3d;
+
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    0 2px 6px rgba(0, 0, 0, 0.4),
+    inset 0 0 60px rgba(200, 168, 75, 0.05),
+    inset 0 0 2px rgba(92, 51, 23, 0.3);
+
+  /* Subtle parchment grain */
+  background-image:
+    radial-gradient(ellipse at 30% 20%, rgba(200, 168, 75, 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 80%, rgba(92, 51, 23, 0.05) 0%, transparent 60%);
+}
+
+/* Decorative corner ornaments */
+.mechanic-card::before,
+.mechanic-card::after {
+  content: '✦';
+  position: absolute;
+  font-size: 0.9rem;
+  color: var(--gold-dark);
+  opacity: 0.7;
+  line-height: 1;
+}
+
+.mechanic-card::before {
+  top: 6px;
+  left: 10px;
+}
+
+.mechanic-card::after {
+  top: 6px;
+  right: 10px;
+}
+
+.card-corner-bl,
+.card-corner-br {
+  position: absolute;
+  font-size: 0.9rem;
+  color: var(--gold-dark);
+  opacity: 0.7;
+  line-height: 1;
+}
+
+.card-corner-bl {
+  bottom: 6px;
+  left: 10px;
+}
+
+.card-corner-br {
+  bottom: 6px;
+  right: 10px;
+}
+
+.card-corner-bl::before,
+.card-corner-br::before {
+  content: '✦';
+}
+
+/* Mahogany inner border line */
+.mechanic-card .card-border-inner {
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(92, 51, 23, 0.3);
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+/* ── Card Icon ─────────────────────────────────────── */
+.card-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--mahogany), var(--mahogany-dark));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--gold-dark);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(200, 168, 75, 0.2);
+  flex-shrink: 0;
+}
+
+.card-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
+}
+
+/* ── Card Text Elements ────────────────────────────── */
+.card-category {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  padding: 0.15rem 0.6rem;
+  border: 1px solid var(--gold-dark);
+  border-radius: 2px;
+  background: rgba(200, 168, 75, 0.08);
+}
+
+.card-name {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: 700;
+  color: var(--ink);
+  text-align: center;
+  line-height: 1.25;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.card-description {
+  font-family: 'Crimson Text', serif;
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  line-height: 1.55;
+  color: var(--ink-faded);
+  text-align: center;
+  flex: 1;
+}
+
+.card-link {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--mahogany);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+  padding-bottom: 1px;
+  margin-top: auto;
+}
+
+.card-link:hover {
+  color: var(--gold-dark);
+  border-bottom-color: var(--gold-dark);
+}
+
+/* ── Roll Button ───────────────────────────────────── */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.roll-button {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  border: 2px solid var(--gold);
+  border-radius: 4px;
+  background: linear-gradient(
+    160deg,
+    #d4b05a 0%,
+    #c8a84b 35%,
+    #a07830 65%,
+    #c8a84b 100%
+  );
+  color: var(--mahogany-dark);
+  text-shadow: 0 1px 0 rgba(255, 220, 100, 0.5);
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.5),
+    0 2px 4px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.15),
+    0 0 30px rgba(200, 168, 75, 0.15);
+  position: relative;
+  transition: box-shadow 0.2s;
+  will-change: transform;
+}
+
+.roll-button:hover:not(:disabled) {
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.6),
+    0 2px 4px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.15),
+    0 0 45px rgba(200, 168, 75, 0.3);
+}
+
+.roll-button:active:not(:disabled) {
+  transform: scale(0.96);
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.5),
+    inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.roll-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.roll-hint {
+  font-family: 'Crimson Text', serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--parchment-dark);
+  opacity: 0.5;
+  letter-spacing: 0.02em;
+}
+
+/* ── Scrollbar ─────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--wood-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--mahogany);
+  border-radius: 4px;
+}
